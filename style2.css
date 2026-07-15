@@ -1,0 +1,363 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #111;
+    color: white;
+}
+
+/* Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: black;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #f5c542;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: .3s;
+}
+
+nav a:hover,
+nav a.active {
+    color: #f5c542;
+}
+
+.login-btn a {
+    text-decoration: none;
+    color: white;
+    background: #c59d5f;
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.login-btn a:hover {
+    background: #a67c52;
+}
+
+/* Section defaults */
+section {
+    padding: 80px;
+    scroll-margin-top: 80px;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: #f5c542;
+}
+
+/* Hero */
+.hero {
+    height: 100vh;
+    width: 100%;
+    background: url("barber.jpg") center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, .6);
+    padding: 70px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 65px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #c59d5f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #a57d3f;
+}
+
+/* About */
+.about p {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Styles / Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #222;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .4s;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .5);
+}
+
+.card:hover {
+    transform: translateY(-15px);
+}
+
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.card h3 {
+    padding: 20px;
+    color: #f5c542;
+}
+
+.card p {
+    padding: 0 20px 20px;
+}
+
+/* Booking */
+.booking {
+    background: #1b1b1b;
+    text-align: center;
+}
+
+.booking form {
+    max-width: 500px;
+    margin: auto;
+}
+
+.booking input,
+.booking textarea {
+    width: 100%;
+    padding: 18px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.booking button {
+    padding: 18px;
+    width: 100%;
+    background: #f5c542;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.booking button:hover {
+    background: #ff9900;
+}
+
+#bookingMessage {
+    max-width: 500px;
+    margin: 0 auto 20px;
+}
+
+#bookingMessage.success {
+    color: #4caf50;
+}
+
+#bookingMessage.error {
+    color: #ff5252;
+}
+
+/* Login */
+.login {
+    background: #1b1b1b;
+    text-align: center;
+}
+
+.login form {
+    max-width: 400px;
+    margin: auto;
+}
+
+.login input {
+    width: 100%;
+    padding: 18px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.login button {
+    padding: 18px;
+    width: 100%;
+    background: #f5c542;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.login button:hover {
+    background: #ff9900;
+}
+
+/* Contact */
+.contact {
+    text-align: center;
+}
+
+.social {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.social a {
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 40px;
+    background: #f5c542;
+    color: black;
+    font-weight: bold;
+    transition: .4s;
+}
+
+.social a:hover {
+    background: white;
+    color: black;
+    transform: translateY(-5px);
+}
+
+/* Footer */
+footer {
+    background: black;
+    padding: 25px;
+    text-align: center;
+    color: #aaa;
+}
+
+/* Mobile menu button */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    header {
+        flex-wrap: wrap;
+        padding: 20px 20px;
+    }
+
+    .login-btn {
+        margin-top: 15px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+}
+/* Auth messages */
+#bookingMessage,
+#authMessage {
+    max-width: 500px;
+    margin: 0 auto 20px;
+    font-weight: 600;
+}
+
+#bookingMessage.success,
+#authMessage.success {
+    color: #4caf50;
+}
+
+#bookingMessage.error,
+#authMessage.error {
+    color: #ff5252;
+}
+
+.auth-toggle {
+    margin-top: 20px;
+}
+
+.auth-toggle a {
+    color: #f5c542;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.auth-toggle a:hover {
+    text-decoration: underline;
+}
